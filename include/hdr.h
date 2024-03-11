@@ -3,7 +3,9 @@
 
 typedef struct Stack *stack_t;  // in complete type
 
-stack_t create_stack(int);
-stack_t push(stack_t);
+stack_t new_stack(int);
+void push(stack_t, const int);
+int isFull(stack_t);
+int isEmpty(stack_t);
 
 #endif
