@@ -12,8 +12,23 @@
 int main(void)
 {
     stack_t stack = new_stack(STACK_SIZE);
-    push(stack, 100);
-    peek(stack);
+    int n;
+
+    for(;;)
+    {
+        printf("Enter an integer => ");
+
+        scanf("%d", &n);
+
+        if(n == 0)
+            return 0;
+
+        push(stack, n);
+
+        printf("peek(stack) -> ", peek(stack));
+    }
+
+    // push(stack, 100);
 
     free(stack);
     
